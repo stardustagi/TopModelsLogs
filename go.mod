@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/labstack/echo/v4 v4.13.4
-	github.com/stardustagi/TopLib v0.0.21
+	github.com/stardustagi/TopLib v0.0.25
 	github.com/swaggo/echo-swagger v1.4.1
 	github.com/swaggo/swag v1.16.6
 	go.uber.org/zap v1.27.0

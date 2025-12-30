@@ -101,6 +101,21 @@ func (s *LogService) initialization() {
 		"getModelTrainingLogDetail",
 		[]string{"log", "training"},
 		s.GetModelTrainingLogDetail))
+
+	s.app.AddPostHandler("log", server.NewHandler(
+		"createModelsCallLog",
+		[]string{"log", "call"},
+		s.CreateModelsCallLog))
+
+	s.app.AddPostHandler("log", server.NewHandler(
+		"getModelsCallLogList",
+		[]string{"log", "call"},
+		s.GetModelsCallLogList))
+
+	s.app.AddPostHandler("log", server.NewHandler(
+		"getModelsCallLogDetail",
+		[]string{"log", "call"},
+		s.GetModelsCallLogDetail))
 }
 
 // CreateApiLog 创建API调用日志

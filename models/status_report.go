@@ -16,6 +16,7 @@ type StatusReport struct {
 	Provider         string    `json:"provider" xorm:"'provider' not null default '' comment('虚拟provider') VARCHAR(64)"`
 	ActualProvider   string    `json:"actual_provider" xorm:"'actual_provider' not null default '' comment('实际服务商') VARCHAR(64)"`
 	ActualProviderId string    `json:"actual_provider_id" xorm:"'actual_provider_id' not null default '' comment('实际服务商ID') VARCHAR(64)"`
+	UserId           int64     `json:"user_id"` //用户id
 	CallerKey        string    `json:"caller_key" xorm:"'caller_key' not null default '' comment('客户端key') index VARCHAR(128)"`
 	Stream           int       `json:"stream" xorm:"'stream' not null default 0 comment('是否流式访问：0-否，1-是') TINYINT(1)"`
 	ReportType       string    `json:"report_type" xorm:"'report_type' not null default '' comment('报告类型：text/image/video') VARCHAR(16)"`

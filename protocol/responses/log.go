@@ -18,3 +18,9 @@ type GetModelTrainingLogListResp struct {
 	Logs  []models.ModelTrainingLog `json:"logs"`
 	Total int                       `json:"total"`
 }
+
+// GetModelsCallLogListResp 获取模型调用日志列表响应
+type GetModelsCallLogListResp struct {
+	Logs  []models.StatusReport `json:"logs"`
+	Total int                   `json:"total"`
+}

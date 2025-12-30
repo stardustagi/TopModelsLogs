@@ -10,6 +10,7 @@ import (
 	"github.com/stardustagi/TopModelsLogs/constants"
 
 	_ "github.com/stardustagi/TopModelsLogs/docs"
+	echoSwagger "github.com/swaggo/echo-swagger"
 )
 
 // @title TopModelsLogs API
@@ -30,6 +31,8 @@ func main() {
 	logger.Info("Init redis")
 
 	app := backend.NewApplication(conf.Get("websrv"))
+	// 添加swagger
+	app.AddNativeHandler("GET", "/swagger/*", echoSwagger.WrapHandler)
 
 	// 启动日志服务
 	logService := service.GetLogServiceInstance()

@@ -75,6 +75,7 @@ func (h *Application) syncDatabaseSchema() {
 	modelList := []interface{}{
 		&models.ApiLog{},
 		&models.ModelTrainingLog{},
+		&models.StatusReport{},
 	}
 
 	dao := databases.GetDao()

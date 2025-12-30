@@ -1,0 +1,222 @@
+{"level":"info","time":"2025-12-30T19:26:26.104+0800","caller":"TopModelsLogs/main.go:26","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T19:26:26.104+0800","caller":"TopModelsLogs/main.go:28","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T19:26:26.105+0800","caller":"TopModelsLogs/main.go:30","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T19:26:26.106+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:26:26.106+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T19:26:26.106+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"TopModelsLogs/main.go:37","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T19:26:26.107+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8080"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T19:26:30.379+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}
+{"level":"info","time":"2025-12-30T19:27:15.494+0800","caller":"server/server_http.go:128","msg":"received shutdown signal:","module":"httpServer","signal":"interrupt"}
+{"level":"info","time":"2025-12-30T19:27:15.494+0800","caller":"server/server_http.go:134","msg":"shutting down server...","module":"httpServer"}
+{"level":"info","time":"2025-12-30T19:27:15.495+0800","caller":"server/server_http.go:142","msg":"server exited gracefully","module":"httpServer"}
+{"level":"info","time":"2025-12-30T19:27:15.495+0800","caller":"service/log_service.go:67","msg":"Stopping LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:27:15.495+0800","caller":"service/log_service.go:69","msg":"LogService stopped.","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:27:15.495+0800","caller":"TopModelsLogs/main.go:43","msg":"Services stopped","module":"main"}
+{"level":"info","time":"2025-12-30T19:37:59.430+0800","caller":"TopModelsLogs/main.go:27","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T19:37:59.430+0800","caller":"TopModelsLogs/main.go:29","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"TopModelsLogs/main.go:31","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"TopModelsLogs/main.go:40","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T19:37:59.431+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8083"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T19:37:59.458+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"TopModelsLogs/main.go:27","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"TopModelsLogs/main.go:29","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"TopModelsLogs/main.go:31","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.152+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"TopModelsLogs/main.go:40","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T19:38:03.153+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8083"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T19:38:03.180+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T19:38:03.181+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}
+{"level":"fatal","time":"2025-12-30T19:38:03.182+0800","caller":"server/server_http.go:86","msg":"failed to start server:","module":"httpServer","error":"listen tcp :8083: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"server/server_http.go:128","msg":"received shutdown signal:","module":"httpServer","signal":"interrupt"}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"server/server_http.go:134","msg":"shutting down server...","module":"httpServer"}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"server/server_http.go:142","msg":"server exited gracefully","module":"httpServer"}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"service/log_service.go:67","msg":"Stopping LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"service/log_service.go:69","msg":"LogService stopped.","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:40:06.523+0800","caller":"TopModelsLogs/main.go:46","msg":"Services stopped","module":"main"}
+{"level":"info","time":"2025-12-30T19:40:11.144+0800","caller":"TopModelsLogs/main.go:27","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T19:40:11.144+0800","caller":"TopModelsLogs/main.go:29","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"TopModelsLogs/main.go:31","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"TopModelsLogs/main.go:40","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T19:40:11.145+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:40:11.168+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:40:11.168+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T19:40:11.168+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8083"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T19:40:11.169+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T21:34:02.177+0800","caller":"server/server_http.go:128","msg":"received shutdown signal:","module":"httpServer","signal":"interrupt"}
+{"level":"info","time":"2025-12-30T21:34:02.177+0800","caller":"server/server_http.go:134","msg":"shutting down server...","module":"httpServer"}
+{"level":"info","time":"2025-12-30T21:34:02.178+0800","caller":"server/server_http.go:142","msg":"server exited gracefully","module":"httpServer"}
+{"level":"info","time":"2025-12-30T21:34:02.178+0800","caller":"service/log_service.go:67","msg":"Stopping LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T21:34:02.178+0800","caller":"service/log_service.go:69","msg":"LogService stopped.","module":"LogService"}
+{"level":"info","time":"2025-12-30T21:34:02.178+0800","caller":"TopModelsLogs/main.go:46","msg":"Services stopped","module":"main"}
+{"level":"info","time":"2025-12-30T22:23:22.583+0800","caller":"TopModelsLogs/main.go:27","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T22:23:22.583+0800","caller":"TopModelsLogs/main.go:29","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T22:23:22.583+0800","caller":"TopModelsLogs/main.go:31","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"TopModelsLogs/main.go:40","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T22:23:22.584+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8083"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T22:23:23.047+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"server/server_http.go:128","msg":"received shutdown signal:","module":"httpServer","signal":"interrupt"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"server/server_http.go:134","msg":"shutting down server...","module":"httpServer"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"server/server_http.go:142","msg":"server exited gracefully","module":"httpServer"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"service/log_service.go:67","msg":"Stopping LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"service/log_service.go:69","msg":"LogService stopped.","module":"LogService"}
+{"level":"info","time":"2025-12-30T22:23:25.021+0800","caller":"TopModelsLogs/main.go:46","msg":"Services stopped","module":"main"}
+{"level":"info","time":"2025-12-30T22:24:25.290+0800","caller":"TopModelsLogs/main.go:27","msg":"Init logs","module":"main"}
+{"level":"info","time":"2025-12-30T22:24:25.290+0800","caller":"TopModelsLogs/main.go:29","msg":"Init mysql","module":"main"}
+{"level":"info","time":"2025-12-30T22:24:25.290+0800","caller":"TopModelsLogs/main.go:31","msg":"Init redis","module":"main"}
+{"level":"info","time":"2025-12-30T22:24:25.290+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:211","msg":"http native handler registered:","module":"httpServer","method":"GET","path":"api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:179","msg":"http group registered:","module":"httpServer","path":"api/log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createApiLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getApiLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelTrainingLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelTrainingLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"createModelsCallLog","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogList","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"server/server_http.go:202","msg":"http handler registered to group:","module":"httpServer","path":"getModelsCallLogDetail","prefix":"log"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"service/log_service.go:63","msg":"Starting LogService...","module":"LogService"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"TopModelsLogs/main.go:40","msg":"Log service started","module":"main"}
+{"level":"info","time":"2025-12-30T22:24:25.291+0800","caller":"backend/app.go:74","msg":"Syncing database schema...","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"backend/app.go:91","msg":"Database schema synced successfully","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"backend/app.go:53","msg":"Stopping HttpBackend","module":"HttpBackend"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:79","msg":"http server listened on:","module":"httpServer","addr":":8083"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogDetail"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogList"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"GET","path":"/api/swagger/*"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createApiLog"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogList"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getApiLogDetail"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelsCallLog"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelsCallLogDetail"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"echo_route_not_found","path":"/api/log/*"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/createModelTrainingLog"}
+{"level":"info","time":"2025-12-30T22:24:25.309+0800","caller":"server/server_http.go:82","msg":"http route registered:","module":"httpServer","method":"POST","path":"/api/log/getModelTrainingLogList"}

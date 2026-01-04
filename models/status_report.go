@@ -16,7 +16,6 @@ type StatusReport struct {
 	Provider         string    `json:"provider" xorm:"'provider' not null default '' comment('虚拟provider') VARCHAR(64)"`
 	ActualProvider   string    `json:"actual_provider" xorm:"'actual_provider' not null default '' comment('实际服务商') VARCHAR(64)"`
 	ActualProviderId string    `json:"actual_provider_id" xorm:"'actual_provider_id' not null default '' comment('实际服务商ID') VARCHAR(64)"`
-	UserId           int64     `json:"user_id"` //用户id
 	CallerKey        string    `json:"caller_key" xorm:"'caller_key' not null default '' comment('客户端key') index VARCHAR(128)"`
 	Stream           int       `json:"stream" xorm:"'stream' not null default 0 comment('是否流式访问：0-否，1-是') TINYINT(1)"`
 	ReportType       string    `json:"report_type" xorm:"'report_type' not null default '' comment('报告类型：text/image/video') VARCHAR(16)"`
@@ -26,6 +25,7 @@ type StatusReport struct {
 	StatusCode       string    `json:"status_code" xorm:"'status_code' not null default '' comment('状态码（非空为失败）') VARCHAR(16)"`
 	StatusMessage    string    `json:"status_message" xorm:"'status_message' not null default '' comment('状态消息（状态码非空时有值）') VARCHAR(512)"`
 	CreatedAt        time.Time `json:"created_at" xorm:"'created_at' not null default current_timestamp() comment('请求时间') index DATETIME"`
+	UserId           int64     `json:"user_id" xorm:"'user_id' BIGINT(20)"`
 }
 
 func (o *StatusReport) TableName() string {

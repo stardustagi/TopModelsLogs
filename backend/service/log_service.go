@@ -60,6 +60,10 @@ func (s *LogService) Start(app *backend.Application) {
 	}
 	s.app = app
 	s.initialization()
+
+	// 启动告警配置定时同步任务
+	s.StartAlarmConfigSyncTask()
+
 	s.logger.Info("Starting LogService...")
 }
 

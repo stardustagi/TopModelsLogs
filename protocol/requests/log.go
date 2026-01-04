@@ -85,6 +85,7 @@ type CreateModelsCallLogReq struct {
 	StatusCode       string  `json:"status_code"`
 	StatusMessage    string  `json:"status_message"`
 	CreatedAt        int64   `json:"created_at"`
+	UserId           int64   `json:"user_id"` //用户id
 }
 
 // GetModelsCallLogListReq 获取模型调用日志列表请求

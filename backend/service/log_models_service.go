@@ -67,6 +67,8 @@ func (s *LogService) CreateModelsCallLog(ctx echo.Context,
 		StatusCode:       req.StatusCode,
 		StatusMessage:    req.StatusMessage,
 		CreatedAt:        createdAt,
+
+		UserId: req.UserId,
 	}
 
 	// 获取日分表表名
@@ -89,7 +91,7 @@ func (s *LogService) CreateModelsCallLog(ctx echo.Context,
 	}
 
 	// 插入数据到日分表
-	_, err = session.Native().Table(tbName).InsertOne(statusReport)
+	_, err = session.Native().Table(tbName).Insert(statusReport)
 	if err != nil {
 		s.logger.Error("创建模型调用日志失败", zap.Error(err), zap.String("table", tbName))
 		return protocol.Response(ctx, constants.ErrInternalServer.AppendErrors(err), nil)

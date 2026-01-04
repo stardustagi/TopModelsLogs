@@ -140,7 +140,7 @@ func (s *LogService) userAlarm(userId int64, stats ModelReportStats) {
 	if s.checkAlarm(userId, int64(stats.TokensPerSecCount), "token") {
 		s.logger.Error("tokens_per_sec 超出阈值报警", zap.Any("stats", stats))
 	}
-	if s.checkAlarm(userId, int64(stats.LatencyCount), "token") {
+	if s.checkAlarm(userId, int64(stats.LatencyCount), "latency") {
 		s.logger.Error("latency 超出阈值报警", zap.Any("stats", stats))
 	}
 	if s.checkAlarm(userId, stats.FailureCount, "failure") {

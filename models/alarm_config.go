@@ -8,9 +8,9 @@ import (
 
 type AlarmConfig struct {
 	Id         int64  `json:"id" xorm:"'id' pk autoincr BIGINT(20)"`
-	Type       string `json:"type" xorm:"'type' comment('token,billing') VARCHAR(12)"`
-	Min        int    `json:"min" xorm:"'min' INT(8)"`
-	Max        int    `json:"max" xorm:"'max' INT(8)"`
+	Type       string `json:"type" xorm:"'type' comment('token,billing,failure,latency') VARCHAR(12)"`
+	Min        int64  `json:"min" xorm:"'min' BIGINT(8)"`
+	Max        int64  `json:"max" xorm:"'max' BIGINT(8)"`
 	CreatedAt  int64  `json:"created_at" xorm:"'created_at' BIGINT(255)"`
 	Status     int    `json:"status" xorm:"'status' comment('0,1') TINYINT(1)"`
 	LastupDate int64  `json:"lastup_date" xorm:"'lastup_date' BIGINT(12)"`

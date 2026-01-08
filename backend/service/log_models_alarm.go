@@ -12,8 +12,8 @@ import (
 
 // AlarmConfigValue Redis存储的告警配置值结构
 type AlarmConfigValue struct {
-	Min int `json:"min"`
-	Max int `json:"max"`
+	Min int64 `json:"min"`
+	Max int64 `json:"max"`
 }
 
 // getAlarmConfig 从数据库获取告警配置并同步到Redis
@@ -65,8 +65,8 @@ func (s *LogService) getAlarmConfig() error {
 
 		s.logger.Debug("同步告警配置成功",
 			zap.String("field", field),
-			zap.Int("min", config.Min),
-			zap.Int("max", config.Max))
+			zap.Int64("min", config.Min),
+			zap.Int64("max", config.Max))
 	}
 
 	s.logger.Info("告警配置同步完成", zap.Int("count", len(alarmConfigs)))

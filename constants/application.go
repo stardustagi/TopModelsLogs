@@ -11,8 +11,9 @@ var (
 )
 
 var (
-	RedisPrefix   string
-	LogsKeyPrefix string
+	RedisPrefix     string
+	LogsKeyPrefix   string
+	DefaultPageSize int = 1000
 )
 
 var (

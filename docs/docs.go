@@ -14,7 +14,759 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/log/createApiLog": {
+            "post": {
+                "description": "记录API调用日志",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "创建API调用日志",
+                "parameters": [
+                    {
+                        "description": "创建API日志请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.CreateApiLogReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/createModelTrainingLog": {
+            "post": {
+                "description": "记录模型训练日志",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "创建模型训练日志",
+                "parameters": [
+                    {
+                        "description": "创建模型训练日志请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.CreateModelTrainingLogReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/createModelsCallLog": {
+            "post": {
+                "description": "记录模型调用状态日志",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "创建模型调用日志",
+                "parameters": [
+                    {
+                        "description": "创建模型调用日志请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.CreateModelsCallLogReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getApiLogDetail": {
+            "post": {
+                "description": "根据ID获取API日志详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取API日志详情",
+                "parameters": [
+                    {
+                        "description": "获取API日志详情请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetApiLogDetailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getApiLogList": {
+            "post": {
+                "description": "分页查询API日志列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取API日志列表",
+                "parameters": [
+                    {
+                        "description": "获取API日志列表请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetApiLogListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.GetApiLogListResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getModelTrainingLogDetail": {
+            "post": {
+                "description": "根据ID获取模型训练日志详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取模型训练日志详情",
+                "parameters": [
+                    {
+                        "description": "获取模型训练日志详情请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetModelTrainingLogDetailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getModelTrainingLogList": {
+            "post": {
+                "description": "分页查询模型训练日志列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取模型训练日志列表",
+                "parameters": [
+                    {
+                        "description": "获取模型训练日志列表请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetModelTrainingLogListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.GetModelTrainingLogListResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getModelsCallLogDetail": {
+            "post": {
+                "description": "根据ID获取模型调用日志详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取模型调用日志详情",
+                "parameters": [
+                    {
+                        "description": "获取模型调用日志详情请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetModelsCallLogDetailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.DefaultResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/log/getModelsCallLogList": {
+            "post": {
+                "description": "分页查询模型调用日志列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Log"
+                ],
+                "summary": "获取模型调用日志列表",
+                "parameters": [
+                    {
+                        "description": "获取模型调用日志列表请求",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/requests.GetModelsCallLogListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.GetModelsCallLogListResp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.ApiLog": {
+            "type": "object",
+            "properties": {
+                "api_path": {
+                    "type": "string"
+                },
+                "client_ip": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "integer"
+                },
+                "duration": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "request_body": {
+                    "type": "string"
+                },
+                "response_body": {
+                    "type": "string"
+                },
+                "status_code": {
+                    "type": "integer"
+                },
+                "user_agent": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "models.ModelTrainingLog": {
+            "type": "object",
+            "properties": {
+                "accuracy": {
+                    "type": "number"
+                },
+                "created_at": {
+                    "type": "integer"
+                },
+                "epoch": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "log_level": {
+                    "type": "string"
+                },
+                "log_message": {
+                    "type": "string"
+                },
+                "loss": {
+                    "type": "number"
+                },
+                "model_id": {
+                    "type": "integer"
+                },
+                "model_name": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "training_time": {
+                    "type": "integer"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "models.StatusReport": {
+            "type": "object",
+            "properties": {
+                "actual_model": {
+                    "type": "string"
+                },
+                "actual_provider": {
+                    "type": "string"
+                },
+                "actual_provider_id": {
+                    "type": "string"
+                },
+                "caller_key": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "latency": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "model_id": {
+                    "type": "integer"
+                },
+                "node_addr": {
+                    "type": "string"
+                },
+                "provider": {
+                    "type": "string"
+                },
+                "report_type": {
+                    "type": "string"
+                },
+                "status_code": {
+                    "type": "string"
+                },
+                "status_message": {
+                    "type": "string"
+                },
+                "step": {
+                    "type": "string"
+                },
+                "stream": {
+                    "type": "integer"
+                },
+                "tokens_per_sec": {
+                    "type": "integer"
+                },
+                "trace_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "requests.CreateApiLogReq": {
+            "type": "object",
+            "required": [
+                "api_path",
+                "method"
+            ],
+            "properties": {
+                "api_path": {
+                    "type": "string"
+                },
+                "client_ip": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "integer"
+                },
+                "duration": {
+                    "type": "integer"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "request_body": {
+                    "type": "string"
+                },
+                "response_body": {
+                    "type": "string"
+                },
+                "status_code": {
+                    "type": "integer"
+                },
+                "user_agent": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.CreateModelTrainingLogReq": {
+            "type": "object",
+            "properties": {
+                "accuracy": {
+                    "type": "number"
+                },
+                "created_at": {
+                    "type": "integer"
+                },
+                "epoch": {
+                    "type": "integer"
+                },
+                "log_level": {
+                    "type": "string"
+                },
+                "log_message": {
+                    "type": "string"
+                },
+                "loss": {
+                    "type": "number"
+                },
+                "model_id": {
+                    "type": "integer"
+                },
+                "model_name": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "training_time": {
+                    "type": "integer"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.CreateModelsCallLogReq": {
+            "type": "object",
+            "properties": {
+                "actual_model": {
+                    "type": "string"
+                },
+                "actual_provider": {
+                    "type": "string"
+                },
+                "actual_provider_id": {
+                    "type": "string"
+                },
+                "caller_key": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "integer"
+                },
+                "latency": {
+                    "type": "number"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "model_id": {
+                    "type": "integer"
+                },
+                "node_addr": {
+                    "type": "string"
+                },
+                "provider": {
+                    "type": "string"
+                },
+                "report_type": {
+                    "type": "string"
+                },
+                "status_code": {
+                    "type": "string"
+                },
+                "status_message": {
+                    "type": "string"
+                },
+                "step": {
+                    "type": "string"
+                },
+                "stream": {
+                    "type": "boolean"
+                },
+                "tokens_per_sec": {
+                    "type": "integer"
+                },
+                "trace_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "requests.GetApiLogDetailReq": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.GetApiLogListReq": {
+            "type": "object",
+            "properties": {
+                "api_path": {
+                    "type": "string"
+                },
+                "end_time": {
+                    "type": "integer"
+                },
+                "page_info": {
+                    "$ref": "#/definitions/requests.PageReq"
+                },
+                "start_time": {
+                    "type": "integer"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.GetModelTrainingLogDetailReq": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.GetModelTrainingLogListReq": {
+            "type": "object",
+            "properties": {
+                "end_time": {
+                    "type": "integer"
+                },
+                "log_level": {
+                    "type": "string"
+                },
+                "model_id": {
+                    "type": "integer"
+                },
+                "page_info": {
+                    "$ref": "#/definitions/requests.PageReq"
+                },
+                "start_time": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.GetModelsCallLogDetailReq": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "requests.GetModelsCallLogListReq": {
+            "type": "object",
+            "properties": {
+                "actual_provider_id": {
+                    "type": "string"
+                },
+                "caller_key": {
+                    "type": "string"
+                },
+                "end_time": {
+                    "type": "integer"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "page_info": {
+                    "$ref": "#/definitions/requests.PageReq"
+                },
+                "start_time": {
+                    "type": "integer"
+                },
+                "step": {
+                    "type": "string"
+                },
+                "trace_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "requests.PageReq": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer"
+                },
+                "skip": {
+                    "type": "integer"
+                },
+                "sort": {
+                    "type": "string"
+                }
+            }
+        },
+        "responses.DefaultResponse": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "responses.GetApiLogListResp": {
+            "type": "object",
+            "properties": {
+                "logs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.ApiLog"
+                    }
+                },
+                "total": {
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.GetModelTrainingLogListResp": {
+            "type": "object",
+            "properties": {
+                "logs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.ModelTrainingLog"
+                    }
+                },
+                "total": {
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.GetModelsCallLogListResp": {
+            "type": "object",
+            "properties": {
+                "logs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.StatusReport"
+                    }
+                },
+                "total": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
@@ -27,6 +779,8 @@ var SwaggerInfo = &swag.Spec{
 	Description:      "LLM 日志服务 API 文档",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
+	LeftDelim:        "{{",
+	RightDelim:       "}}",
 }
 
 func init() {
